@@ -1,0 +1,11 @@
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  color: red;
+  font-size: 30px;
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  font-size: 30px;
+  color: black;
+}

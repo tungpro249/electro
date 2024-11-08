@@ -1,101 +1,115 @@
+"use client";
+import dynamic from "next/dynamic";
+const BrandCarousel = dynamic(() => import("@/app/components/brand-carousel"));
+const CarouselComponent = dynamic(() => import("@/app/components/carousel"));
+const Footer = dynamic(() => import("@/app/components/layout/footer"));
+const Gallery = dynamic(() => import("@/app/components/layout/gallery"));
+const Header = dynamic(() => import("@/app/components/layout/header"));
+const ProductTabV1 = dynamic(
+  () => import("@/app/components/product-tab/product-tab-v1")
+);
+const SpecialOfferCard = dynamic(
+  () => import("@/app/components/product-tab/product-tab-v1/SpecialProduct")
+);
+const ProductSection = dynamic(
+  () => import("@/app/components/product-tab/product-tab-v2")
+);
+
+import ProductTabs from "@/app/components/product-tab/product-slider";
+import NewArrivals from "@/app/components/new-arrivals";
+import ProductLayout from "@/app/components/poduct-layout";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const brands = [
+    {
+      name: "Nike",
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/themeforest1.png?v=1649837305&width=200",
+    },
+    {
+      name: "Adidas",
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/themeforest2.png?v=1649837316&width=200",
+    },
+    {
+      name: "Puma",
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/themeforest3.png?v=1649837326&width=200",
+    },
+    {
+      name: "New Balance",
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/themeforest4.png?v=1649837336&width=200",
+    },
+    {
+      name: "Reebok",
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/themeforest5.png?v=1649837344&width=200",
+    },
+    {
+      name: "Under Armour",
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/themeforest6.png?v=1649837364&width=200",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const sliderData = [
+    {
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/slide-bg.jpg?v=1649834146&width=1920",
+    },
+    {
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/image-slide-3.png?v=1649834858&width=520",
+    },
+    {
+      image:
+        "https://electrox.arenacommerce.com/cdn/shop/files/image-slide-1.png?v=1649835414&width=520",
+    },
+  ];
+
+  return (
+    <>
+      <CarouselComponent dataList={sliderData} />
+      <Gallery />
+
+      {/* product v1 */}
+      <div className="container mx-auto flex flex-col lg:flex-row gap-6 mt-6">
+        <div className="lg:w-1/3 w-full">
+          <SpecialOfferCard />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="lg:w-2/3 w-full">
+          <ProductTabV1 />
+        </div>
+      </div>
+      {/* product v2 */}
+      <div className="container mx-auto my-6">
+        <ProductSection />
+      </div>
+
+      <div className="container mx-auto my-6">
+        <ProductTabs />
+      </div>
+
+      <div className="container mx-auto my-6">
+        <Image
+          src="https://electrox.arenacommerce.com/cdn/shop/files/single-banner-h1_1440x.png?v=1649836868"
+          alt="Another Image"
+          width={1440}
+          height={300}
+          layout="responsive"
+          loading="lazy"
+        />
+      </div>
+      <div className="container mx-auto my-6">
+        <NewArrivals />
+      </div>
+
+      <ProductLayout />
+
+      {/* Brand Carousel */}
+      <BrandCarousel brands={brands} />
+    </>
   );
 }
