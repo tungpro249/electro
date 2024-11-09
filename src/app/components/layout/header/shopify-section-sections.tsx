@@ -5,6 +5,7 @@ import {
   UserOutlined,
   EnvironmentOutlined,
 } from "@ant-design/icons";
+import Link from "next/link";
 
 const ShopifySectionSections = () => {
   return (
@@ -31,8 +32,12 @@ const ShopifySectionSections = () => {
             </div>
 
             <div className="flex items-center space-x-2">
-              <UserOutlined className="text-lg text-gray-500" />
-              <span className="text-sm text-gray-600">Sign in or Register</span>
+              <Link href="/account/login">
+                <UserOutlined className="text-lg text-gray-500" />
+                <span className="text-sm text-gray-600">
+                  Sign in or Register
+                </span>
+              </Link>
             </div>
             <GlobalOutlined className="text-lg text-gray-500" />
           </div>

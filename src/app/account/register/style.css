@@ -1,0 +1,10 @@
+.divide-x > *:not(:last-child) {
+  border-right: 2px solid #ccc;
+  margin: 0 10px;
+}
+
+.divider-vertical {
+  border-left: 2px solid #ccc; /* Định dạng viền thẳng đứng */
+  height: 100%; /* Chiều cao tương ứng với chiều cao của cột */
+  margin: 0 50%;
+}
