@@ -27,8 +27,10 @@ const ShopifySectionSections = () => {
           {/* Phần bên phải */}
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <EnvironmentOutlined className="text-lg text-gray-500" />
-              <span className="text-sm text-gray-600">Store Location</span>
+              <Link href={"/store-location"}>
+                <EnvironmentOutlined className="text-lg text-gray-500" />
+                <span className="text-sm text-gray-600">Store Location</span>
+              </Link>
             </div>
 
             <div className="flex items-center space-x-2">

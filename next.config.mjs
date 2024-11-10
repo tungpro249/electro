@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+import dotenv from 'dotenv';
+dotenv.config();
 const nextConfig = {
   images: {
     domains: ["buffer.com", "electrox.arenacommerce.com"],
@@ -10,6 +12,7 @@ const nextConfig = {
       },
     ],
   },
+  
 };
 
 export default nextConfig;
