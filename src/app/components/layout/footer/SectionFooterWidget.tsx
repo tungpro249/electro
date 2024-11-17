@@ -7,6 +7,7 @@ import {
   YoutubeFilled,
 } from "@ant-design/icons";
 import { Col, Row } from "antd";
+import Link from "next/link";
 
 const SectionFooterWidget = () => {
   return (
@@ -50,12 +51,24 @@ const SectionFooterWidget = () => {
         <div>
           <b>Information</b>
           <ul>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>All Collections</li>
-            <li>Privacy policy</li>
-            <li>PC Computers</li>
-            <li>Terms & Conditions</li>
+            <Link href="/about-us" className="block hover:underline">
+              About Us
+            </Link>
+            <Link href="/contact-us" className="block hover:underline">
+              Contact Us
+            </Link>
+            <Link href="/collections" className="block hover:underline">
+              All Collections
+            </Link>
+            <Link href="/privacy-policy" className="block hover:underline">
+              Privacy policy
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              className="block hover:underline"
+            >
+              Terms & Conditions
+            </Link>
           </ul>
         </div>
       </Col>

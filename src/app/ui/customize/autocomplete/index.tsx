@@ -17,6 +17,7 @@ const CustomSelectForm: React.FC<CustomSelectFormProps> = ({
   onChange,
   placeholder,
   disabled = false,
+  ...props
 }) => {
   return (
     <div className="mb-4">
@@ -28,6 +29,7 @@ const CustomSelectForm: React.FC<CustomSelectFormProps> = ({
         style={{ width: "100%" }}
         className="rounded-full"
         disabled={disabled}
+        {...props}
       />
     </div>
   );
