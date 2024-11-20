@@ -1,10 +1,8 @@
 "use client";
-import { Button, Col, Grid, Image, Input, Row, Select, Table } from "antd";
+import { Button, Col, Image, Input, Row, Table } from "antd";
 import React, { useState } from "react";
 import ButtonBase from "../ui/customize/button";
 import CustomSelectForm from "../ui/customize/autocomplete";
-
-const { Option } = Select;
 
 const ShoppingCart = () => {
   const [quantity, setQuantity] = useState(1);

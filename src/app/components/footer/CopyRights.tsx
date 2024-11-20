@@ -1,9 +1,9 @@
 import AmericanExpressIcon from "@/app/components/icon/cardIcon/AmericanExpressIcon";
-import MastercardIcon from "../../icon/cardIcon/MasterCardIcon";
 import VisaIcon from "@/app/components/icon/cardIcon/VisaIcon";
 import PayPalIcon from "@/app/components/icon/cardIcon/PayPalIcon";
 import DinersClubIcon from "@/app/components/icon/cardIcon/DinersClubIcon";
 import DiscoverIcon from "@/app/components/icon/cardIcon/DiscoverIcon";
+import MastercardIcon from "../icon/cardIcon/MasterCardIcon";
 
 const Copyrights = () => {
   return (

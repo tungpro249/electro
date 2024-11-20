@@ -1,10 +1,8 @@
-import BrandCarousel from "@/app/components/brand-carousel";
-import Footer from "@/app/components/layout/footer";
-import ProductLayout from "@/app/components/poduct-layout";
-import { Image } from "antd";
 import dynamic from "next/dynamic";
+const BrandCarousel = dynamic(() => import("@/app/components/brand-carousel"));
+const ProductLayout = dynamic(() => import("@/app/components/poduct-layout"));
+import { Image } from "antd";
 import { brands, categories } from "./mockdata";
-const Header = dynamic(() => import("@/app/components/layout/header"));
 
 const Collection = () => {
   return (

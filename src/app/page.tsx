@@ -2,9 +2,7 @@
 import dynamic from "next/dynamic";
 const BrandCarousel = dynamic(() => import("@/app/components/brand-carousel"));
 const CarouselComponent = dynamic(() => import("@/app/components/carousel"));
-const Footer = dynamic(() => import("@/app/components/layout/footer"));
-const Gallery = dynamic(() => import("@/app/components/layout/gallery"));
-const Header = dynamic(() => import("@/app/components/layout/header"));
+const Gallery = dynamic(() => import("@/app/components/gallery"));
 const ProductTabV1 = dynamic(
   () => import("@/app/components/product-tab/product-tab-v1")
 );
