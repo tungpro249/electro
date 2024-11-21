@@ -1,4 +1,3 @@
-import { brands } from "@/app/collections/mockdata";
 import { Divider, Collapse, Checkbox } from "antd";
 const { Group } = Checkbox;
 const { Panel } = Collapse;

@@ -6,7 +6,7 @@ import { EnvironmentOutlined } from "@ant-design/icons";
 import CustomSelectForm from "../ui/customize/autocomplete";
 
 const StoreLocation = () => {
-  const [markerLocation, setMarkerLocation] = useState({
+  const [markerLocation, ] = useState({
     lat: 21.028511,
     lng: 105.804817,
   });

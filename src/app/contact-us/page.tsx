@@ -7,7 +7,7 @@ import InputBase from "../ui/customize/input";
 import TextArea from "antd/es/input/TextArea";
 
 const ContactUs = () => {
-  const [markerLocation, setMarkerLocation] = useState({
+  const [markerLocation, ] = useState({
     lat: 21.028511,
     lng: 105.804817,
   });
