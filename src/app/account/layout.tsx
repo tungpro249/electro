@@ -1,6 +1,6 @@
 import ProductLayout from "../components/poduct-layout";
 
-const AccountLayout = ({ children }) => {
+const AccountLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <main>{children}</main>
